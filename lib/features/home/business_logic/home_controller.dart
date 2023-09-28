@@ -36,7 +36,7 @@ class HomeController extends GetxController {
     Future.delayed(Duration.zero, () async {
       await postState.observe(
         (p0) async {
-          return await homeService.getPosts();
+          return await homeService.getPosts(postsPerPage: 30);
         },
         onSuccess: (value) async {
           await LocalStorage.storePosts(value);
