@@ -27,6 +27,7 @@ class LocalStorage {
     final cachedData = readData(StorageKeys.posts);
     return cachedData != null ? json.decode(cachedData) : null;
   }
+  //nn
 
   // static List<dynamic>? getCachedPost() {
   //   return json.decode(readData(StorageKeys.posts));

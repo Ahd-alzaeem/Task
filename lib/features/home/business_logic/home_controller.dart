@@ -43,6 +43,7 @@ class HomeController extends GetxController {
           print('%%%%%%%%%%%%%%%%%');
           print(error);
           print('%%%%%%%%%%%%%%%%%');
+          print('%%%%%%%%%%%%%%%%%');
         },
       );
     });
