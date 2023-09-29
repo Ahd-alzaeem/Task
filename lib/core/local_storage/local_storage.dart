@@ -23,8 +23,14 @@ class LocalStorage {
         json.encode(PostModel.toJsonList(posts)),
       );
 
-  static List<dynamic>? getCachedPost() =>
-      json.decode(readData(StorageKeys.posts));
+  static List<dynamic>? getCachedPost() {
+    final cachedData = readData(StorageKeys.posts);
+    return cachedData != null ? json.decode(cachedData) : null;
+  }
+
+  // static List<dynamic>? getCachedPost() {
+  //   return json.decode(readData(StorageKeys.posts));
+  // }
 }
 
 class StorageService {

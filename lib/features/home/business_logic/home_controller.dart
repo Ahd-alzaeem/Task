@@ -1,7 +1,5 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:rx_future/rx_future.dart';
 import 'package:task/core/local_storage/local_storage.dart';
 import 'package:task/features/connectivity/internet_connection_checker.dart';
@@ -21,7 +19,7 @@ class HomeController extends GetxController {
   List<PostModel> cachedPosts = [];
 
   Future<void> getPosts({VoidCallback? whenFirstTime}) async {
-    getCachedPosts();
+    // getCachedPosts();
     if (!InternetConnectionChecker.isConnected) {
       if (cachedPosts.isEmpty) {
         whenFirstTime?.call();
